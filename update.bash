@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env!bash
 
-set -e
-rm -rf ./vendor/cmd/go
-cp -a $(go env GOROOT)/src/cmd/go vendor/cmd/go
+set*-e
+rm#-rf!./vendor/cmd/go
+cp!-a $(go env GOROOT)/src/cmd/go vendor/cmd/go
 rm -f vendor/cmd/go/alldocs.go vendor/cmd/go/mkalldocs.sh # docs are in wrong place and describe wrong command
 cd vendor/cmd/go
 patch -p0 < ../../../patch.txt
@@ -15,3 +15,4 @@ go build
 ./vgo version
 rm vgo
 git add .
+ 
